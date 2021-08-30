@@ -13,7 +13,7 @@ public abstract class DepthFirstSearch<T extends Comparable<T>> implements BiFun
 
     protected final Graph<T> graph;
     
-    public DepthFirstSearch(final Graph<T> graph) {
+    protected DepthFirstSearch(final Graph<T> graph) {
         this.graph = graph;
     }
     

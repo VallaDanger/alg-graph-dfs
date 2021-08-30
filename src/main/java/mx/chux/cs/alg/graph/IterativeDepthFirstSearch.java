@@ -44,8 +44,8 @@ public class IterativeDepthFirstSearch<T extends Comparable<T>> extends DepthFir
                 final Collection<Node<T>> adjecents = this.graph.getAdjacentNodes(node);
                 
                 for( Node<T> n : adjecents ) {
+                    parents.putIfAbsent(n, node);
                     if( !stack.contains(n) ) {
-                        parents.put(n, node);
                         stack.push(n);
                     }
                 }
